@@ -225,6 +225,11 @@ label ul {
   max-width: 30rem;
 }
 
+.reviews-articlecontainer {
+  display: flex;
+  overflow: scroll;
+}
+
 
 /* GETTE WEDDING */
 .gette-wedding-img {
@@ -270,17 +275,33 @@ label ul {
   max-width: 55rem;
 }
 
+.review-h2 {
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 0rem;
+}
+
 .review-gigacontainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 5rem;
+  align-items: flex-start;
+  margin-top: 0rem;
+  overflow-x: scroll;
 }
 
 .review-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 2rem 3rem;
+  width: 350px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+}
+
+
+.review-img {
+  padding-top: 2rem;
 }
 
 
@@ -293,11 +314,12 @@ label ul {
 }
 
 .review-text {
-  max-width: 30rem;
+  max-width: 19rem;
   font-family: 'sf_pro_displaythin_italic';
   font-size: 1rem;
   text-align: center;
-  padding: 1rem;
+  padding: 0 1rem;
+  padding-bottom: 2rem;
 }
 
 

@@ -1,131 +1,499 @@
 *, *:before, *:after 
 { box-sizing: border-box; }
 
-html { font-size: 18px; }
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('../fonts/bebas-neu/bebasneue-webfont.woff2') format('woff2'),
+         url('../fonts/bebas-neu/bebasneue-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'sf_compact_displayregular';
+    src: url('../fonts/sf-compact/sfcompactdisplay-regular-webfont.woff2') format('woff2'),
+         url('../fonts/sf-compact/sfcompactdisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'sf_compact_displaybold';
+    src: url('../fonts/sf-compact/sfcompactdisplay-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sf-compact/sfcompactdisplay-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'sf_pro_displaythin_italic';
+    src: url('../fonts/sf-pro/sf-pro-display-thinitalic-webfont.woff2') format('woff2'),
+         url('../fonts/sf-pro/sf-pro-display-thinitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+html { 
+    font-size: 16px; 
+    overflow-x: hidden;
+}
 
 body {
-  color: #e0e4cc;
+  color: #1E2223;
   font-size: 1.2em;
   line-height: 1.6;
-  background: #fa6900;
   overflow-x: hidden;
+  font-family: 'sf_compact_displayregular',Arial, Helvetica, sans-serif;
 }
 
-label .menu {
-  position: absolute;
-  right: -100px;
-  top: -100px;
-  z-index: 100;
-  width: 200px;
-  height: 200px;
-  background: #FFF;
-  border-radius: 50% 50% 50% 50%;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
-  cursor: pointer;
-  
+header {
+    overflow-x: hidden;
+    position: relative;   
+    height: 100vh; 
 }
 
-label .hamburger {
-  position: absolute;
-  top: 135px;
-  left: 50px;
-  width: 30px;
-  height: 2px;
-  background: #69D2e7;
-  display: block;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+.greenline {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #02E6B8;
 }
 
-label .hamburger:after, label .hamburger:before {
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #69d2e7;
-}
-
-label .hamburger:before { top: -10px; }
-
-label .hamburger:after { bottom: -10px; }
-
-label input { display: none; }
-
-label input:checked + .menu {
-  box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
-  border-radius: 0;
-  
-}
-
-label input:checked + .menu .hamburger {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  
-}
-
-label input:checked + .menu .hamburger:after {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  bottom: 0;
-  
-}
-
-label input:checked + .menu .hamburger:before {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  top: 0;
-  
-}
-
-label input:checked + .menu + ul { opacity: 1; }
-
-label ul {
-  z-index: 200;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  -webkit-transition: .25s 0s ease-in-out;
-  transition: .25s 0s ease-in-out;
-}
-
-label a {
-  margin-bottom: 1em;
-  display: block;
-  color: #f38630;
-  text-decoration: none;
-  
-}
 
 h1 {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 60%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 80rem;
   text-align: center;
+  z-index: 0;
 }
 
+h2 {
+    font-family: 'bebas_neueregular';
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.musicmix-container {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.gette-nametrack {
+  padding-left: 1rem;
+  margin-top: -0.4rem;
+}
+
+.section-presskit {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5rem;
+  color: white;
+  background-image: url("/src/images/presskit/presskitbg.jpg");
+  background-position: center;
+}
+
+/* NAVBAR */
+.input-navbar {
+    display: none;
+}
+
+label ul {
+    position: absolute;
+    font-size: 2rem;
+    top: 20%;
+    left: 10%;
+}
+
+.nav-ul > li > a {
+    color: white;
+    text-decoration: none;
+    font-family: 'bebas_neueregular';
+    top: 30%;
+    left: 10%;
+    z-index: 200;
+}
+
+.nav-ul {
+  z-index: 200;
+}
+
+.nav-ul > li > a:hover {
+    color: #00FFCC;
+}
 
 /* HEADER */
-
 .header-container {
     background-image: url("../images/header.jpg");
     height: 100vh;
-    background-position: center;
+    background-position: 40%;
     background-size: cover;
 }
 
 .hidden {
     display: none;
 }
+
+
+.contact-me {
+    color: #1E2223;
+    background-color: #00FFCC;
+    padding: 0.5rem 3rem;
+    text-decoration: none;
+    border-radius: 2rem;
+    width: 14rem;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'sf_compact_displaybold';
+    text-transform: uppercase;
+    transition: background-color 0.2s ;
+}
+
+.contact-me:hover {
+    background-color: #00B08D
+}
+
+.presskit {
+  color: #1E2223;
+  background-color: #00FFCC;
+  padding: 0.5rem 3rem;
+  text-decoration: none;
+  border-radius: 2rem;
+  width: 14rem;
+  text-align: center;
+  font-family: 'sf_compact_displaybold';
+  text-transform: uppercase;
+  transition: background-color 0.2s ;
+  border: none;
+  margin-top: 2rem;
+}
+
+
+.presskit:hover {
+  background-color: #00B08D
+}
+
+.presskit:focus {
+  outline: transparent;
+}
+
+.h2-festival {
+    position: relative;
+    text-align: left;
+    color: #02E6B8;
+}
+
+.section-festival {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
+  background-color: #1E2223;
+  color: white;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "img-festival text-festival";
+}
+
+
+.img-festival {
+  grid-area: img-festival;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* width: 397px;
+  height: 345px; */
+}
+
+.text-festival-container {
+  grid-area: text-festival;
+  margin: 4rem 2rem;
+  max-width: 30rem;
+}
+
+
+/* GETTE WEDDING */
+.gette-wedding-img {
+  width: 100%;
+  object-fit: cover;
+  padding-bottom: 2rem;
+}
+
+.section-corporate {
+  padding-bottom: 2rem;
+}
+
+/* .greyline {
+  width: 0.5rem;
+  height: 10rem;
+  background-color: grey;
+} */
+
+
+.wedding-tekst {
+  margin: 2rem 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.wedding-tekst::before {
+  content: "";
+  background-color: grey;
+  width: 0.1rem;
+  margin-right: 2rem;
+}
+
+.wedding-tekst::after {
+  content: "";
+  position: relative;
+  background-color: grey;
+  width: 0.1rem;
+  margin-left: 2rem;
+}
+
+.wedding-text {
+  max-width: 55rem;
+}
+
+.review-gigacontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.review-title {
+  color: #02E6B8;
+  font-family: 'bebas_neueregular';
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.review-text {
+  max-width: 30rem;
+  font-family: 'sf_pro_displaythin_italic';
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+/* SECTION MUSIC */
+
+.section-music {
+  background-color: #1E2223;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.music-mix {
+  opacity: 1;
+}
+
+.music-mix:hover {
+  opacity: 0.5;
+}
+
+
+footer {
+  background-color: #1E2223;
+  color: #02E6B8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 3.5rem;
+}
+
+.contact-h2 {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.sm-link {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  transition: opacity 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.sm-link:hover {
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 500px) {
+    .contact-me {
+        width: 80%;
+    }
+
+    .text-festival-container {
+      margin: 2rem 1rem;
+    }
+
+    .wedding-tekst {
+      margin: 2rem 1rem;
+    }
+
+    .wedding-tekst::before {
+      content: "";
+      background-color: transparent;
+      width: 0rem;
+      margin: 0;
+    }
+    
+    .wedding-tekst::after {
+      content: "";
+      background-color: transparent;
+      width: 0rem;
+      margin: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+label .menu {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    background: #1E2223;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    box-shadow: 0 0 0 0 #1E2223, 0 0 0 0 #1E2223;
+    cursor: pointer;
+  }
+  
+  label .hamburger {
+    position: absolute;
+    top: 135px;
+    left: 50px;
+    width: 30px;
+    height: 2px;
+    background: #00FFCC;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  
+  label .hamburger:after, label .hamburger:before {
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #00FFCC;
+  }
+  
+  label .hamburger:before { top: -10px; }
+  
+  label .hamburger:after { bottom: -10px; }
+  
+  label input { display: none; }
+  
+  label input:checked + .menu {
+    box-shadow: 0 0 0 100vw #1E2223, 0 0 0 100vh #1E2223;
+    border-radius: 0;
+    
+  }
+  
+  label input:checked + .menu .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    
+  }
+  
+  label input:checked + .menu .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+    
+  }
+  
+  label input:checked + .menu .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+    
+  }
+  
+  label input:checked + .menu + ul { opacity: 1; }
+  
+  label ul {
+    z-index: 200;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: .25s 0.1s ease-in-out;
+    transition: .25s 0.1s ease-in-out;
+  }
+  
+  label a {
+    margin-bottom: 1em;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-family: 'bebas_neueregular';
+    font-size: 1.4rem;
+  }
+
+    .h2-festival {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        margin: -10rem -4.6rem;
+        color: #02E6B8;
+    }
+
+    .section-festival {
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "img-festival"
+        "text-festival";
+    }
+
+    .img-festival {
+      grid-area: img-festival;
+      /* width: 767px;
+      height: 510px; */
+    }
+  }
+
+

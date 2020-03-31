@@ -3,43 +3,112 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
     <title>Gette</title>
     <link rel="stylesheet" href="src/sass/reset.css">
     <link rel="stylesheet" href="src/sass/style.css">
     <link rel="stylesheet" href="dist/bundle.css">
     <link rel="icon" href="src/images/gette.ico" type="image/x-icon" />
+    
     <script src="dist/bundle.js"></script>
 </head>
 
 <body>
     <header>
             <label>
-            <input type="checkbox">
+            <input class="input-navbar" type="checkbox">
             <span class="menu"> <span class="hamburger"></span> </span>
-            <ul>
-              <li> <a href="#">Club/Festival</a> </li>
-              <li> <a href="#">Wedding</a> </li>
-              <li> <a href="#">Corporate event</a> </li>
-              <li> <a href="#">Music</a> </li>
-              <li> <a href="#">Press Kit</a> </li>
-              <li> <a href="#">Contact</a> </li>
+            <ul class="nav-ul">
+              <li> <a href="#festival">Club/Festival</a> </li>
+              <li> <a href="#wedding">Wedding</a> </li>
+              <li> <a href="#corporate">Corporate event</a> </li>
+              <li> <a href="#music">Music</a> </li>
+              <li> <a href="#presskit">Press Kit</a> </li>
+              <li> <a href="#contact">Contact</a> </li>
             </ul>
             </label>
             <div class="header-container">
                 <h1>
                     <span class="hidden">Gette</span>    
-                    <img src="src/images/gette.svg" alt="gette" width=200>
+                    <img src="src/images/gette.svg" alt="gette" width=250>
                 </h1>
-                <a href="">Contact me</a>
-            </div>
-            
-
+                <a class="contact-me" href="#contact">Contact me</a>
+            </div>   
     </header>
     <main>
-
+        <div class="greenline"></div>
+        <section id="festival" class="section-festival">
+            <img class="img-festival" src="./src/images/festival/festival-xs.jpg" alt="festival">
+            <div class="text-festival-container">
+                <h2 class="h2-festival">Club/festival</h2>
+                <p>DJ GETTE is reeds een trotse resident in heel wat clubs in Leuven: Barvista, Vesper, Rector & Ambiorix. Elk jaar wordt hij uitgenodigd om naar Egypte af te reizen en er de bekende club Duport Pool Club in vuur en vlam te zetten. Hij vloog ook al meermaals naar Spanje om er te draaien in Club Phoenix en stond al op het podium van het festival Bruksellive.</p>
+            </div>
+        </section>
+        <div class="greenline"></div>
+        <section id="wedding" class="section-wedding">
+            <img class="gette-wedding-img" src="./src/images/wedding/gette-l.jpg" alt="gette">
+            <div class="wedding-tekst">
+                <div>
+                    <h2>Wedding</h2>
+                    <p class="wedding-text">GETTE staat garant voor een klassevol en eigentijds feest. Verwacht je aan een wervelwind van perfect gemixte hits en danskrakers. Een goed gesprek vooraf is de ideale voorbereiding voor een geslaagd event. Alle wensen in verband met klank, licht en extra’s zijn mogelijk en kunnen worden aangepast zodat jullie het huwelijk beleven waar jullie al jaren van dromen. Ga als kersverse echtgenoten al dansend de nacht in en kies voor een DJ die jullie stijl begrijpt én tot leven brengt.  </p>
+                </div>
+            </div>
+            <div class="review-gigacontainer">
+                <h2>Reviews</h2>
+                <div>
+                    <article class="review-container">
+                        <img src="./src/images/wedding/gertjan.jpg" alt="gertjan">
+                        <h3 class="review-title">Gertjan & Amber</h3>
+                        <p class="review-text">“ We waren super tevreden van Gert als DJ op ons trouwfeest. Het was eenvoudig om met hem af te spreken, hij bracht al het professioneel materiaal zelf mee en luisterde goed naar onze muzikale trouwwensen. Maar bovenal heeft hij er tijdens ons trouwfeest een zalig feestje van gemaakt, waarbij hij alle genodigden mee had. Ik zou DJ Gette aan iedereen aanraden! "</p>
+                    </article>
+                    <article>
+                        <img src="" alt="">
+                        <h3></h3>
+                        <p></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <div class="greenline"></div>
+        <section id="corporate" class="section-corporate">
+            <img class="gette-wedding-img" src="./src/images/galabal/galabal.jpg" alt="corporate">
+            <div class="wedding-tekst">
+                <div>
+                    <h2>Corporate Event</h2>
+                    <p class="wedding-text">Op zoek naar een DJ die zowel de beste hedendaagse muziek als leukste retro plaatjes naadloos in elkaar mixt? Zijn jarenlange ervaring zorgt voor een uitgebreide knowhow waardoor hij zich als een kameleon kan aanpassen, welke omstandigheden hem ook worden aangereikt. Hij maakt zich elke locatie zonder probleem eigen en hierdoor heeft hij het perfecte recept in handen om jullie corporate event om te toveren tot een waar feest. </p>
+                </div>
+            </div>
+        </section>
+        <div class="greenline"></div>
+        <section id="music" class="section-music">
+            <h2>Music</h2>
+            <div>
+                <article class="musicmix-container">
+                    <a class="music-mix" target="_blank" href="https://www.mixcloud.com/GETTE/gette-yearmix-2018/"><img src="./src/images/music/play.svg" alt="play"></a>
+                    <p class="gette-nametrack">Gette - Yearmix 2018</p>
+                </article>
+                <article class="musicmix-container">
+                    <a class="music-mix" target="_blank" href="https://soundcloud.com/gert-steenacker/yearmix-2017"><img src="./src/images/music/play.svg" alt="play"></a>
+                    <p class="gette-nametrack">Gette - Yearmix 2017</p>
+                </article>
+            </div>
+        </section>
+        <div class="greenline"></div>
+        <section id="presskit" class="section-presskit">
+            <h2>Press Kit</h2>
+            <a target="_blank" class="presskit" href="./src/pdf/presskit.pdf">Download</a>
+        </section>
     </main>
-    <footer>
-
+    <div class="greenline"></div>
+    <footer id="contact">
+        <img src="./src/images/gette.svg" alt="logo">
+        <h2 class="contact-h2">Contact</h2>
+        <div>
+            <a target="_blank" class="sm-link" href="https://www.facebook.com/GETTE.dj/"><img src="./src/images/footer/facebook.svg" alt="facebook"></a>
+            <a target="_blank" class="sm-link" href="https://www.instagram.com/dj.gette/"><img src="./src/images/footer/instagram.svg" alt="instagram"></a>
+            <a target="_blank" class="sm-link" href="https://soundcloud.com/gert-steenacker"><img src="./src/images/footer/soundcloud.svg" alt="soundcloud"></a>
+            <a target="_blank" class="sm-link" href="https://www.mixcloud.com/GETTE/"><img src="./src/images/footer/mixsound.svg" alt="mixsound"></a>
+        </div>
     </footer>
 </body>
 

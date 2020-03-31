@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="37px" viewBox="0 0 39 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Play button Copy 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M28.8658366,20.6871829 L20.3325189,14.5716386 C19.8836124,14.2499222 19.2588992,14.3530303 18.9371829,14.8019368 C18.8154593,14.9717837 18.75,15.1754949 18.75,15.3844557 L18.75,27.6155443 C18.75,28.167829 19.1977153,28.6155443 19.75,28.6155443 C19.9589608,28.6155443 20.162672,28.550085 20.3325189,28.4283614 L28.8658366,22.3128171 C29.3147431,21.9911008 29.4178511,21.3663876 29.0961348,20.9174811 C29.0324695,20.8286458 28.9546718,20.7508481 28.8658366,20.6871829 Z M3.75,21.5 C3.75,31.39 12.15,39.4166667 22.5,39.4166667 C32.85,39.4166667 41.25,31.39 41.25,21.5 C41.25,11.61 32.85,3.58333333 22.5,3.58333333 C12.15,3.58333333 3.75,11.61 3.75,21.5 Z M7.5,21.5 C7.5,13.59875 14.23125,7.16666667 22.5,7.16666667 C30.76875,7.16666667 37.5,13.59875 37.5,21.5 C37.5,29.40125 30.76875,35.8333333 22.5,35.8333333 C14.23125,35.8333333 7.5,29.40125 7.5,21.5 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-365.000000, -5046.000000)">
+            <g id="Atoms-/-icons-/-System-/-Play" transform="translate(362.000000, 5043.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#C2D1D9" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <g id="Atoms-/-Colors-/-White" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="evenodd">
+                    <rect id="Atoms-/-Colors-/-Black" x="0" y="0" width="45" height="43"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

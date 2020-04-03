@@ -90,22 +90,10 @@
 /*!*********************************!*\
   !*** ./src/javascript/index.js ***!
   \*********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log('Webpack Boilerplate');\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
-
-/***/ }),
-
-/***/ "./src/sass/styles.scss":
-/*!******************************!*\
-  !*** ./src/sass/styles.scss ***!
-  \******************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/styles.scss?");
+eval("{\n  var allKoppels;\n\n  var getUniqueKoppel = function getUniqueKoppel() {\n    var koppels = [];\n    allKoppels.forEach(function (koppel) {\n      if (!koppels.includes(koppel.img)) {\n        koppels.push(koppel.img);\n      }\n    });\n    return koppels;\n  };\n\n  var setActiveElement = function setActiveElement($li) {\n    var $old = document.querySelector(\".active\");\n\n    if ($old) {\n      $old.classList.add(\"filter-koppel\");\n      $old.classList.remove(\"active\");\n    }\n\n    $li.classList.remove(\"filter-koppel\");\n    $li.classList.add(\"active\");\n  };\n\n  var createFilterKoppels = function createFilterKoppels() {\n    var $ulKoppels = document.querySelector(\".koppels\");\n    getUniqueKoppel().forEach(function (koppel) {\n      var $button = document.createElement(\"button\");\n      var $image = document.createElement(\"img\");\n      $button.value = koppel;\n      $button.classList.add(\"filter-koppel\");\n      $image.src = \"./src/images/wedding/\".concat(koppel, \".jpg\");\n      $image.width = 100;\n      $image.classList.add(\"review-img\");\n\n      if ($button.value === 'gertjan') {\n        $button.classList.add(\"active\");\n      }\n\n      $button.addEventListener('click', function () {\n        setActiveElement($button);\n        $reviewKoppel = document.querySelector(\".review-container\");\n        $reviewKoppel.innerHTML = \"\";\n        allKoppels.forEach(function (kpl) {\n          if (koppel === kpl.img) {\n            var $h3 = document.createElement(\"h3\");\n            $h3.innerHTML = kpl.name;\n            $h3.classList.add(\"review-title\");\n            var $text = document.createElement(\"p\");\n            $text.innerHTML = \"\\\" \".concat(kpl.text, \" \\\"\");\n            $text.classList.add(\"review-text\");\n            $reviewKoppel.appendChild($h3);\n            $reviewKoppel.appendChild($text);\n          }\n        });\n      });\n      $button.appendChild($image);\n      $ulKoppels.appendChild($button);\n    });\n  };\n\n  var initFetch = function initFetch() {\n    var url = \"src/data/koppels.json\";\n    fetch(url).then(function (r) {\n      return r.json();\n    }).then(function (jsonData) {\n      allKoppels = jsonData;\n      console.log(allKoppels);\n      createFilterKoppels();\n    });\n  };\n\n  var init = function init() {\n    initFetch();\n  };\n\n  init();\n}\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
 
 /***/ })
 

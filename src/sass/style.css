@@ -36,11 +36,10 @@
     font-style: normal;
 }
 
-
-
 html { 
     font-size: 16px; 
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -84,7 +83,7 @@ h2 {
 .musicmix-container {
   display: flex;
   align-items: center;
-  padding-top: 2rem;
+  padding: 2rem;
 }
 
 .gette-nametrack {
@@ -99,8 +98,10 @@ h2 {
   align-items: center;
   padding-bottom: 5rem;
   color: white;
-  background-image: url("/src/images/presskit/presskitbg.jpg");
+  background-image: url("/src/images/presskit/presskit-m.jpg");
   background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* NAVBAR */
@@ -122,6 +123,7 @@ label ul {
     top: 30%;
     left: 10%;
     z-index: 200;
+    font-size: 2rem;
 }
 
 .nav-ul {
@@ -153,8 +155,8 @@ label ul {
     border-radius: 2rem;
     width: 14rem;
     position: absolute;
-    top: 80%;
-    left: 50%;
+    top: 10%;
+    right: -4%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
@@ -166,6 +168,9 @@ label ul {
 .contact-me:hover {
     background-color: #00B08D
 }
+
+
+
 
 .presskit {
   color: #1E2223;
@@ -198,9 +203,6 @@ label ul {
 }
 
 .section-festival {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center; */
   background-color: #1E2223;
   color: white;
   display: grid;
@@ -215,8 +217,6 @@ label ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* width: 397px;
-  height: 345px; */
 }
 
 .text-festival-container {
@@ -233,24 +233,51 @@ label ul {
 
 /* GETTE WEDDING */
 .gette-wedding-img {
-  width: 100%;
+  height: 65vh;
   object-fit: cover;
   padding-bottom: 2rem;
+  background-image: url("/src/images/wedding/gette-m.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.gette-corporate-img {
+  height: 65vh;
+  object-fit: cover;
+  padding-bottom: 2rem;
+  background-image: url("/src/images/galabal/galabal.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.gette-festival-img {
+  height: 65vh;
+  object-fit: cover;
+  padding-bottom: 2rem;
+  background-image: url("/src/images/festival/festival-m.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .section-corporate {
-  padding-bottom: 2rem;
+  padding: 0rem;
 }
 
-/* .greyline {
-  width: 0.5rem;
-  height: 10rem;
-  background-color: grey;
-} */
+
+.music-article-container {
+  display: flex;
+  max-width: 40rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 
 .wedding-tekst {
-  margin: 2rem 4rem;
+  margin:3rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -284,9 +311,8 @@ label ul {
 .review-gigacontainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 0rem;
-  overflow-x: scroll;
 }
 
 .review-container {
@@ -294,9 +320,7 @@ label ul {
   flex-direction: column;
   align-items: center;
   margin: 2rem 3rem;
-  width: 350px;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  max-width: 60rem;
 }
 
 
@@ -314,7 +338,6 @@ label ul {
 }
 
 .review-text {
-  max-width: 19rem;
   font-family: 'sf_pro_displaythin_italic';
   font-size: 1rem;
   text-align: center;
@@ -337,10 +360,11 @@ label ul {
 
 .music-mix {
   opacity: 1;
+  transition: filter .3s ;
 }
 
 .music-mix:hover {
-  opacity: 0.5;
+  filter: invert(46%) sepia(84%) saturate(2221%) hue-rotate(137deg) brightness(95%) contrast(101%)
 }
 
 
@@ -370,8 +394,11 @@ footer {
 }
 
 @media only screen and (max-width: 500px) {
+
     .contact-me {
         width: 80%;
+        top: 70%;
+        left: 50%;
     }
 
     .text-festival-container {
@@ -395,9 +422,67 @@ footer {
       width: 0rem;
       margin: 0;
     }
+
+    .review-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0.5rem 0.5rem;
+      max-width: 60rem;
+    }
+
+    .review-img {
+      width: 4.5rem;
+    }
 }
 
 @media only screen and (max-width: 767px) {
+  .scroll-downs {
+    display: none;
+  }
+
+  .gette-wedding-img {
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    background-image: url("/src/images/wedding/gette-m.jpg");
+  }
+
+  .gette-festival-img {
+    background-image: url("/src/images/festival/festival-m.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .gette-corporate-img {
+    background-image: url("/src/images/galabal/galabal-m.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .section-presskit {
+    background-image: url("/src/images/presskit/presskit-m.jpg");
+    background-attachment: scroll;
+  }
+
+  h1 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80rem;
+    text-align: center;
+    z-index: 0;
+  }
+
+.contact-me {
+    top: 85%;
+    left: 50%;
+}
+
 label .menu {
     position: absolute;
     right: -100px;
@@ -519,3 +604,83 @@ label .menu {
   }
 
 
+  .scroll-text {
+    color: white;
+    text-align: center;
+    margin-left: -0.05rem;
+    margin-top: 0.2rem;
+    opacity: 0.5;
+    font-family: 'sf_compact_displaybold';
+    font-size: 0.9rem;
+  }
+
+
+.scroll-downs {
+  position: absolute;
+  top: 84%;
+  left: 45%;
+  margin: auto;
+  
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+
+
+.filter-koppel {
+  opacity: 0.3;
+  border: none;
+  background-color: white;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.filter-koppel:hover {
+  opacity: 0.5;
+  border: none;
+  background-color: white;
+}
+
+.filter-koppel:focus {
+  outline: none;
+}
+
+
+.active {
+  opacity: 1;
+  border: none;
+  background-color: white;
+}
+
+.active:focus {
+  outline: none;
+}
+
+.koppels {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

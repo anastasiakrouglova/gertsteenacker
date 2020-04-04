@@ -50,7 +50,7 @@
                         $h3.classList.add(`review-title`);
 
                         const $text = document.createElement(`p`);
-                        $text.innerHTML = `" ${kpl.text} "`;
+                        $text.innerHTML = `"${kpl.text}"`;
                         $text.classList.add(`review-text`);
 
                         $reviewKoppel.appendChild($h3);

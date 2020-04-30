@@ -1,2 +1,2 @@
 # Gert Steenacker
-Project for a DJ from Leuven
+Website for DJ Gette
